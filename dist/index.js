@@ -8338,13 +8338,14 @@ let actionHelper = {
         return previousReport;
     }),
 
-    uploadArtifacts: (async (rootDir, mdReport, jsonReport, htmlReport) => {
+    uploadArtifacts: (async (rootDir, mdReport, jsonReport, htmlReport, xmlReport) => {
         const artifactClient = artifact.create();
         const artifactName = 'zap_scan';
         const files = [
             `${rootDir}/${mdReport}`,
             `${rootDir}/${jsonReport}`,
             `${rootDir}/${htmlReport}`,
+            `${rootDir}/${xmlReport}`,
         ];
         const rootDirectory = rootDir;
         const options = {
