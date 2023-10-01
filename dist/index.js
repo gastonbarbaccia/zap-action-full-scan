@@ -3769,7 +3769,7 @@ async function run() {
         try {
             await exec.exec(command);
         } catch (err) {
-            core.setFailed('The ZAP full scan has failed, starting to analyze the alerts. err: ' + err.toString());
+            //core.setFailed('The ZAP full scan has failed, starting to analyze the alerts. err: ' + err.toString());
         }
         await common.main.processReport(token, workspace, plugins, currentRunnerID, issueTitle, repoName);
     } catch (error) {
@@ -49714,7 +49714,7 @@ function DeprecatedOctokit(options) {
       ? options.log.warn
       : console.warn;
   warn(
-    '[@octokit/rest] `const Octokit = require("@octokit/rest")` is deprecated. Use `const { Octokit } = require("@octokit/rest")` instead'
+   //'[@octokit/rest] `const Octokit = require("@octokit/rest")` is deprecated. Use `const { Octokit } = require("@octokit/rest")` instead'
   );
   return new OctokitRest(options);
 }

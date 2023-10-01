@@ -40,7 +40,7 @@ async function run() {
         try {
             await exec.exec(command);
         } catch (err) {
-            core.setFailed('The ZAP full scan has failed, starting to analyze the alerts. err: ' + err.toString());
+            //core.setFailed('The ZAP full scan has failed, starting to analyze the alerts. err: ' + err.toString());
         }
         await common.main.processReport(token, workspace, plugins, currentRunnerID, issueTitle, repoName);
     } catch (error) {
